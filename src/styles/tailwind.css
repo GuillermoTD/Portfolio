@@ -1,0 +1,335 @@
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", monospace;
+    scroll-behavior: smooth;
+}
+
+.App {
+    @apply relative overflow-x-hidden;
+}
+
+.Header {
+    @apply w-full h-[4rem] flex items-center justify-between px-[3rem] z-30 fixed bg-none text-white top-0 transition duration-500;
+}
+
+.Header_Logo {
+    @apply flex items-center justify-center text-[1.5rem];
+    /*hover: text-green-600 transition duration-300;*/
+}
+
+.Header_Links {
+    @apply flex gap-10 items-center justify-around font-extrabold;
+}
+
+.Header_Links_Item {
+    @apply hover: text-green-600 transition duration-300;
+}
+
+@media screen and (max-width: 768px) {
+    .Header_Links {
+        @apply bg-red-600 absolute h-[20rem] w-[10rem];
+    }
+}
+
+.Home {
+    @apply transition duration-500;
+}
+
+.Home_Hero {
+    @apply w-full h-screen;
+}
+
+.Home_Hero:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0009;
+}
+
+.Home_Hero {
+    @apply object-contain flex items-center justify-center relative;
+}
+
+.Home_Hero_Image {
+    @apply w-full h-[100vh] z-0 absolute;
+}
+
+.Home_Hero_Box {
+    @apply z-40 flex flex-col items-center justify-center break-words text-white;
+}
+
+.Home_Hero_Box_Greeting {
+    @apply flex items-center justify-center gap-2 text-[1.2rem];
+}
+
+.Home_Hero_Box_Greeting p {
+    @apply text-green-600 font-extrabold;
+}
+
+.Home_Hero_Box_Title {
+    @apply text-[3rem] text-center;
+}
+
+.Home_Hero_Box_Buttons {
+    @apply flex items-center justify-center gap-4;
+}
+
+.Home_Hero_Box_Buttons button {
+    @apply border-green-600 border-2 px-[2.8rem] py-[0.6rem] rounded-sm;
+    /*hover: bg-green-600 transition duration-300;
+    @apply sm: px-[1.5rem] px-[0.5rem];*/
+}
+
+.Home_Hero_Button_Box_Active {
+    @apply bg-green-600;
+}
+
+.Home_ProjectsBox {
+    @apply bg-slate-900 w-full grid content-center justify-items-center relative pt-[2rem] overflow-hidden py-[2rem];
+    min-height: 40rem;
+    @apply sm: grid-cols-1 md: grid-cols-2 lg: grid-cols-3;
+}
+
+.Home_ProjectsBox h2 {
+    @apply w-full absolute top-0 text-white text-[1.8rem] text-center mb-[5rem] pt-[1rem];
+}
+
+.Home_ProjectsBox_Item {
+    @apply w-[20rem] h-[25rem] flex flex-col items-center justify-center text-center overflow-hidden text-white bg-slate-900 p-[0.4rem];
+}
+
+.Home_ProjectsBox_Item_Image {
+    @apply p-2;
+}
+
+.Home_ProjectsBox_Item_Description {
+    @apply px-2 text-justify;
+}
+
+.Home_ProjectsBox_Item_Title {
+    @apply bg-green-600 w-full flex items-center justify-between px-[1rem];
+}
+
+.Home_ProjectsBox_Item_Title h3 {
+    @apply text-[1.2rem] font-bold;
+}
+
+.Home_ProjectsBox_Item_Title_Icons {
+    @apply text-[1.4rem] flex gap-4;
+}
+
+.Home_ProjectsBox_Item_Title_Icons {
+    @apply text-[1.4rem] flex gap-4;
+}
+
+
+/* Projects styles */
+
+.Projects {
+    @apply transition duration-500;
+}
+
+.Projects_Hero {
+    @apply w-full h-[27rem] relative flex items-center justify-center text-center;
+}
+
+.Projects_Hero:after {
+    content: "";
+    @apply absolute block w-full h-full z-0;
+    background: #0009;
+}
+
+.Projects_Hero_Box {
+    @apply p-[2rem] absolute text-white z-40;
+}
+
+.Projects_Hero_Box h2 {
+    @apply text-[2.4rem];
+}
+
+.Projects_Hero_Box p {
+    @apply text-[1.05rem];
+}
+
+.Projects_Hero img {
+    @apply object-cover w-full h-full z-0 absolute;
+}
+
+.Projects_Container {
+    @apply w-full h-auto py-[5rem] bg-slate-900 grid px-4 content-center justify-center place-items-center gap-4;
+    @apply sm: grid-cols-1 md: grid-cols-2 lg: grid-cols-3;
+}
+
+.Projects_Container_Item {
+    @apply w-[20rem] xs: w-[18rem] h-[25rem] p-[1rem] text-white;
+}
+
+.Projects_Container_Item_Title {
+    @apply bg-green-600 flex items-center justify-between px-[0.5rem] text-[1.12rem];
+}
+
+.Projects_Container_Item_Title_Icons {
+    @apply flex items-center gap-2 text-[1.5rem];
+}
+
+
+/* About styles */
+
+.About {
+    @apply transition duration-500 flex flex-col items-center justify-center;
+}
+
+.About_Hero {
+    @apply w-full h-[20rem] relative flex items-center justify-center text-center;
+}
+
+.About_Hero_Box {
+    @apply p-[2rem] absolute text-white z-40 overflow-hidden;
+}
+
+.About_Hero:after {
+    content: "";
+    @apply absolute block w-full h-full z-0;
+    background: #0009;
+}
+
+.About_Hero_Box {
+    @apply p-[2rem] absolute text-white z-40;
+}
+
+.About_Hero img {
+    @apply object-cover w-full h-full z-0 absolute;
+}
+
+.About_Hero_Box h2 {
+    @apply text-[2.4rem];
+}
+
+.About_Hero_Box p {
+    @apply text-[1.05rem];
+}
+
+.About_Container {
+    @apply w-full h-auto bg-slate-900 p-[2rem] flex flex-col items-center justify-center text-white;
+}
+
+.About_Container_SelfDescription {
+    @apply w-[35rem] h-[20rem] border-4 flex items-center justify-center flex-col text-center px-[2rem];
+}
+
+.About_Container_SelfDescription h2 {
+    @apply text-[2rem];
+}
+
+.About_Container_SelfDescription p {
+    @apply text-[1.2rem];
+}
+
+.About_Container_SkillContainer {
+    @apply w-full h-[50rem] flex flex-col items-center gap-8 pt-[8rem];
+}
+
+.About_Container_SkillContainer h2 {
+    @apply text-[2.3rem]
+}
+
+.About_Container_SkillContainer p {
+    @apply text-[1.3rem] text-center;
+}
+
+.About_Container_SkillContainer_Box {
+    @apply grid grid-cols-3 justify-items-center content-center w-[30rem] h-[20rem] pt-[4rem] gap-12;
+    @apply xs: grid-cols-2 xs: px-[4rem];
+    @apply sm: grid-cols-2;
+    @apply lg: grid-cols-3;
+}
+
+.About_Container_SkillContainer_Box img {
+    @apply w-[4rem] h-[4rem]
+}
+
+
+/* Contact styles */
+
+.Contact {
+    @apply transition duration-500 flex flex-col items-center justify-center relative;
+}
+
+.Contact_Hero {
+    @apply w-full h-[25rem] relative flex flex-col items-center justify-center text-center overflow-hidden;
+}
+
+.Contact_Hero:after {
+    content: "";
+    @apply absolute block w-full h-full z-0;
+    background: #0009;
+}
+
+.Contact_Hero_Box {
+    @apply z-40 absolute text-white;
+}
+
+.Contact_Hero_Box h2 {
+    @apply text-[2.4rem]
+}
+
+.Contact_Hero_Box p {
+    @apply text-[1.05rem]
+}
+
+.Contact_Container {
+    @apply bg-slate-900 w-full flex flex-col items-center justify-center p-[4rem];
+    min-height: 100vh;
+}
+
+.Contact_Form {
+    @apply w-[60%] border-4 border-slate-200 flex flex-col justify-center p-[1.4rem] gap-2;
+    min-width: 20rem;
+}
+
+.Contact_Form label {
+    @apply text-white text-[1.1rem]
+}
+
+.Contact_Form input,
+textarea {
+    @apply py-[0.5rem] rounded-md outline-none text-[1.09rem] px-[1rem]
+}
+
+.Contact_Form_Button {
+    @apply bg-green-600 py-[0.5rem] mt-[1rem] rounded-md text-white font-bold text-[1.2rem] transition duration-300 hover: bg-green-700;
+}
+
+.Footer {
+    @apply bg-gray-800 w-full h-[10rem] text-white flex flex-col items-center justify-center;
+}
+
+.Footer_MediaIcons {
+    @apply w-[18rem] flex items-center justify-center gap-6 text-[2rem];
+}
+
+.Footer_MediaIcons i {
+    @apply hover: text-green-600 transition duration-300;
+}
+
+.Footer_Email {
+    @apply text-[1.2rem];
+}
+
+.Footer_AuthDescription {
+    @apply flex gap-2 items-center text-[1.02rem];
+}
+
+.Footer_AuthDescription i {
+    @apply text-red-700;
+}
